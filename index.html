@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List</title>
+</head>
+<style>
+
+  body{
+    background: url("/batman-v-superman-4780x3181-18724.jpg");
+    background-size: cover;
+  
+  }
+
+  h1{
+    color: white;
+    background-color: red;
+    width: fit-content;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left: 43vw;
+  }
+  div
+  {
+    margin-top: 200px;
+  }
+
+  button{
+    background-color: red;
+    border: none;
+    color: white; 
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    margin-left: 20px;
+  }
+  input{
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+    background: transparent;
+    color: white;
+  }
+  input:focus{
+    outline: none;
+  }
+ ::placeholder{
+    color: white;
+  }
+
+  h2{
+    color: white;
+  }
+</style>
+
+<body style="text-align: center;">
+  <div>
+    <h1>Todo List</h1>
+
+    <input id="input" type="text" placeholder="Enter the activity">
+    <button id="btn">Add</button>
+
+    <ul id="container">
+   
+          <tr>  <h2> Enter the activity <button onclick="deletebtn(event)">Delete</button></h2></tr>
+   
+
+    </ul>
+
+  </div>
+
+
+  <script>
+    let count =1
+    const inputbox = document.getElementById("input")
+    const btn = document.getElementById("btn")
+    const container = document.getElementById("container")
+    btn.addEventListener("click", function () {
+      if(inputbox.value === "")
+    {
+      alert("Enter something before click add button")
+      li.innerHTML = inputbox.value + "<button onclick= " + " deletebtn(event)" + ">Delete</button>"
+    }
+    
+      var li = document.createElement("h2")
+        li.innerHTML = count + ". " + inputbox.value +  "<button onclick= " + " deletebtn(event)" + ">Delete</button>";
+      inputbox.value = " "
+    
+      container.append(li)
+      
+      count++;
+    })  
+    function deletebtn(event) {
+      event.target.parentElement.remove()
+     
+    }
+
+  </script>
+
+
+</body>
+
+</html>
