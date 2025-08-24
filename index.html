@@ -11,9 +11,21 @@
   body{
     background: url("/batman-v-superman-4780x3181-18724.jpg");
     background-size: cover;
-  
   }
+  @media (max-width:600px){
+    body{
+       width: 100%;
+    font-size: 16px;
+    background: url("batman-v-superman-4780x3181-18724.jpg");
+    background-size: 700px 1000px ;
 
+    background-attachment: scroll;
+    
+    }
+    div h1{
+        margin-left: 160px;
+    } 
+  }
   h1{
     color: white;
     background-color: red;
